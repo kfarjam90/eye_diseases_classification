@@ -2,7 +2,7 @@
 
 A Flask web application that classifies eye images into four categories: **Cataract**, **Diabetic Retinopathy**, **Glaucoma**, or **Normal (healthy eye)**, using a deep learning model (ResNet50V2).
 
-[![Watch the demo video](demo_thumbnail.png)](https://your-demo-video-link.com)
+[![Watch the demo video](demo_thumbnail.png)]([https://your-demo-video-link.com](https://www.youtube.com/watch?v=_ZpqXNtnpQk))
 
 - **User-friendly interface** for uploading eye images (retinal scans or fundus images)
 - **Real-time classification** using a trained ResNet50V2 model
