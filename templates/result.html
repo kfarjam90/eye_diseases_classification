@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Retinal Disease Classification Result</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Retinal Disease Classification Result</h1>
+        </header>
+        
+        <div class="result-section">
+            <h2>Prediction: {{ prediction }} ({{ confidence }}% confidence)</h2>
+            
+            <div class="result-details">
+                <div class="probability-chart">
+                    <h3>Probability Distribution:</h3>
+                    {% for i in range(class_names|length) %}
+                    <div class="probability-row">
+                        <span class="class-name">{{ class_names[i] }}</span>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: {{ probabilities[i] }}%"></div>
+                        </div>
+                        <span class="percentage">{{ probabilities[i] }}%</span>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+            
+            <div class="interpretation">
+                <h3>What does this mean?</h3>
+                {% if prediction == 'cataract' %}
+                    <p>The eye examination findings are suggestive of cataract, showing clouding of the normally clear lens. This can cause blurry vision and increased glare. A comprehensive eye exam by an ophthalmologist is recommended for confirmation and to discuss treatment options.</p>
+                {% elif prediction == 'diabetic_retinopathy' %}
+                    <p>The examination reveals signs consistent with diabetic retinopathy, such as microaneurysms, hemorrhages, or exudates. This condition requires prompt evaluation by an eye specialist and better control of blood sugar levels to prevent progression.</p>
+                {% elif prediction == 'glaucoma' %}
+                    <p>The findings indicate possible glaucoma, showing characteristics like increased cup-to-disc ratio or optic nerve damage. This condition requires immediate attention from an eye care professional as it can lead to permanent vision loss if untreated.</p>
+                {% elif prediction == 'normal' %}
+                    <p>No apparent abnormalities were detected in the eye examination. However, regular eye check-ups are recommended, especially if you have risk factors for eye diseases or experience any vision problems.</p>
+                {% endif %}
+                    <p><strong>Note:</strong> This is an AI-assisted prediction and should not replace professional medical diagnosis.</p>
+            </div>
+            
+            <a href="/" class="back-btn">Analyze Another Retinal Image</a>
+        </div>
+    </div>
+</body>
+</html>

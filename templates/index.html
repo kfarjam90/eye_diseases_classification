@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Retinal Disease Classification</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <img src="{{ url_for('static', filename='images/cover_image.jpg') }}" alt="Retinal Disease Classification" class="header-image">
+            <h1>Retinal Disease Classification System</h1>
+            <p>Upload a retinal image to classify it as normal or identify specific eye diseases</p>
+        </header>
+        
+        <div class="upload-section">
+            <form method="POST" action="/predict" enctype="multipart/form-data">
+                <div class="file-input">
+                    <input type="file" name="file" id="file" accept="image/*" required>
+                    <label for="file">Choose a retinal image...</label>
+                </div>
+                <button type="submit" class="predict-btn">Classify Image</button>
+            </form>
+        </div>
+        
+        <div class="info-section">
+            <h2>About the Project</h2>
+            <p>This web application uses a deep learning model to classify retinal images into four categories:</p>
+            <ul>
+                <li><strong>NORMAL:</strong> Healthy retina with no signs of disease</li>
+                <li><strong>DIABETIC RETINOPATHY:</strong> Damage to retinal blood vessels caused by diabetes</li>
+                <li><strong>CATARACT:</strong> Clouding of the eye's natural lens visible in retinal imaging</li>
+                <li><strong>GLAUCOMA:</strong> Optic nerve damage often associated with increased eye pressure</li>
+            </ul>
+            <p>The model was trained on a comprehensive dataset of retinal images to ensure accurate classification across various disease stages and image qualities, making it suitable for diverse clinical settings.</p>
+        </div>
+    </div>
+</body>
+</html>
