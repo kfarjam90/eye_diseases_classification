@@ -37,6 +37,12 @@ Before you begin, ensure you have met the following requirements:
 ```bash
 # Clone the repository
 git clone https://github.com/yourusername/eye-disease-classification.git
+```
+## 🔗 Additional Resources
+- **linkden**: [Karim Farjam's Profile](https://www.linkedin.com/in/karim-farjam-a6b72549/).
+- **Kaggle Notebook**: Interested in a Kaggle environment? Check out the notebook [here](https://www.kaggle.com/parhamfarjam).
+- **LinkedIn**: [Karim Farjam's Profile](https://www.linkedin.com/in/karim-farjam-a6b72549/)
+
 
 # Navigate to the project directory
 cd eye-disease-classification
