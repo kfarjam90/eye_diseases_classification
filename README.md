@@ -1,4 +1,4 @@
-# Eye Disease Classification Web Application
+# Eye Disease Classification Web Application flask
 
 A Flask web application that classifies eye images into four categories: **Cataract**, **Diabetic Retinopathy**, **Glaucoma**, or **Normal (healthy eye)**, using a deep learning model (ResNet50V2).
 
