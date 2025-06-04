@@ -18,7 +18,7 @@ A Flask web application that classifies eye images into four categories: **Catar
 Before you begin, ensure you have met the following requirements:
 - Python 3.7 or higher
 - pip package manager
-- The trained model file (`resnet50v2_eye_model.h5`) placed in the `model/` directory
+- The trained model file (`resnet50v2_eye_model.h5`) placed in the `model/` directory.
 
 ## Key Features
 
